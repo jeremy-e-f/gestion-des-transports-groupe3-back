@@ -101,9 +101,30 @@
             </dependencies>
         </profile>
         <profile>
-            <id>dev-mysql</id>
+            <id>dev-heroku</id>
             <activation>
                 <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <jdbc.driver>org.postgresql.Driver</jdbc.driver>
+                <jdbc.url>jdbc:postgres://ec2-54-246-89-234.eu-west-1.compute.amazonaws.com:5432/d3mkd3gde4usmi</jdbc.url>
+                <jdbc.user>teuaokeyvwobrw</jdbc.user>
+                <jdbc.pass>900ad4034a280bb4ede5f8ef4070abe88abc4f948777046cd9df7ac8ba9c9c63</jdbc.pass>
+                <jpa.hibernate.ddl>create-drop</jpa.hibernate.ddl>
+                <jdbc.connections.max.active>5</jdbc.connections.max.active>
+            </properties>
+            <dependencies>
+                <dependency>
+				    <groupId>org.postgresql</groupId>
+				    <artifactId>postgresql</artifactId>
+				    <scope>runtime</scope>
+				</dependency>
+            </dependencies>
+        </profile>
+        <profile>
+            <id>dev-mysql</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
             </activation>
             <properties>
                 <jdbc.driver>com.mysql.jdbc.Driver</jdbc.driver>
