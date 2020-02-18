@@ -45,6 +45,23 @@ public class Collegue {
 	@OneToMany(mappedBy = "collegue", cascade = CascadeType.PERSIST)
 	private List<RoleCollegue> roles;
 
+	/**
+	 * Constructeurs
+	 */
+	public Collegue() {
+	}
+
+	public Collegue(Long id, String nom, String prenom, String email, String motDePasse, String numeroTel,
+			List<RoleCollegue> roles) {
+		this.id = id;
+		this.nom = nom;
+		this.prenom = prenom;
+		this.email = email;
+		this.motDePasse = motDePasse;
+		this.numeroTel = numeroTel;
+		this.roles = roles;
+	}
+
 	public String getNumeroTel() {
 		return numeroTel;
 	}

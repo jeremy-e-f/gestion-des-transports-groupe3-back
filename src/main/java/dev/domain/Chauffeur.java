@@ -1,5 +1,7 @@
 package dev.domain;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 
 /**
@@ -25,6 +27,13 @@ public class Chauffeur extends Collegue {
 	}
 
 	public Chauffeur(String matricule, String numeroPermis) {
+		this.matricule = matricule;
+		this.numeroPermis = numeroPermis;
+	}
+
+	public Chauffeur(Long id, String nom, String prenom, String email, String motDePasse, String numeroTel,
+			List<RoleCollegue> roles, String matricule, String numeroPermis) {
+		super(id, nom, prenom, email, motDePasse, numeroTel, roles);
 		this.matricule = matricule;
 		this.numeroPermis = numeroPermis;
 	}

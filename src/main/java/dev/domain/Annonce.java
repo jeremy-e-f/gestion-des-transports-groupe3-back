@@ -1,6 +1,7 @@
 package dev.domain;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -68,11 +69,12 @@ public class Annonce {
 	 * Constructeurs
 	 */
 	public Annonce() {
+		this.reservations = new ArrayList<ReservationAnnonce>();
 	}
 
 	public Annonce(Integer id, String adresseDepart, String adresseArrivée, String immatriculation, String marque,
 			String modele, Integer nombrePlacesDispo, LocalDateTime dateDepart, Statut statut, Collegue collegue) {
-		super();
+		this();
 		this.id = id;
 		this.adresseDepart = adresseDepart;
 		this.adresseArrivée = adresseArrivée;
