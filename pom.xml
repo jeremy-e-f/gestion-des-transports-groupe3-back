@@ -107,9 +107,9 @@
             </activation>
             <properties>
                 <jdbc.driver>org.postgresql.Driver</jdbc.driver>
-                <jdbc.url>jdbc:postgres://ec2-54-246-89-234.eu-west-1.compute.amazonaws.com:5432/d3mkd3gde4usmi</jdbc.url>
-                <jdbc.user>teuaokeyvwobrw</jdbc.user>
-                <jdbc.pass>900ad4034a280bb4ede5f8ef4070abe88abc4f948777046cd9df7ac8ba9c9c63</jdbc.pass>
+                <jdbc.url>jdbc:postgres://ec2-46-137-84-173.eu-west-1.compute.amazonaws.com:5432/d9k3cp1vpmfv4b</jdbc.url>
+                <jdbc.user>zuvyynfwqhdmnk</jdbc.user>
+                <jdbc.pass>3c2f76d9e32d1e25c10e8e3b9a5f7acfed5104b953fd38bea2ee74a51ce3f481</jdbc.pass>
                 <jpa.hibernate.ddl>create-drop</jpa.hibernate.ddl>
                 <jdbc.connections.max.active>5</jdbc.connections.max.active>
             </properties>
