@@ -32,7 +32,7 @@ public class Annonce {
 	private String adresseDepart;
 	/** Adresse de départ */
 
-	private String adresseArrivée;
+	private String adresseArrivee;
 	/** Adresse d'arrivée */
 
 	private String immatriculation;
@@ -72,12 +72,12 @@ public class Annonce {
 		this.reservations = new ArrayList<ReservationAnnonce>();
 	}
 
-	public Annonce(Integer id, String adresseDepart, String adresseArrivée, String immatriculation, String marque,
+	public Annonce(Integer id, String adresseDepart, String adresseArrivee, String immatriculation, String marque,
 			String modele, Integer nombrePlacesDispo, LocalDateTime dateDepart, Statut statut, Collegue collegue) {
 		this();
 		this.id = id;
 		this.adresseDepart = adresseDepart;
-		this.adresseArrivée = adresseArrivée;
+		this.adresseArrivee = adresseArrivee;
 		this.immatriculation = immatriculation;
 		this.marque = marque;
 		this.modele = modele;
@@ -85,6 +85,14 @@ public class Annonce {
 		this.dateDepart = dateDepart;
 		this.statut = statut;
 		this.collegue = collegue;
+	}
+
+	public Annonce(Integer id, String adresseDepart, String adresseArrivee, String immatriculation, String marque,
+			String modele, Integer nombrePlacesDispo, LocalDateTime dateDepart, Statut statut, Collegue collegue,
+			List<ReservationAnnonce> reservations) {
+		this(id, adresseDepart, adresseArrivee, immatriculation, marque, modele, nombrePlacesDispo, dateDepart, statut,
+				collegue);
+		this.reservations = reservations;
 	}
 
 	/**
@@ -120,16 +128,16 @@ public class Annonce {
 	/**
 	 * @return the adresseArrivée
 	 */
-	public String getAdresseArrivée() {
-		return adresseArrivée;
+	public String getAdresseArrivee() {
+		return adresseArrivee;
 	}
 
 	/**
 	 * @param adresseArrivée
 	 *            the adresseArrivée to set
 	 */
-	public void setAdresseArrivée(String adresseArrivée) {
-		this.adresseArrivée = adresseArrivée;
+	public void setAdresseArrivee(String adresseArrivée) {
+		this.adresseArrivee = adresseArrivée;
 	}
 
 	/**
@@ -259,7 +267,7 @@ public class Annonce {
 	 */
 	@Override
 	public String toString() {
-		return "Annonce [id=" + id + ", adresseDepart=" + adresseDepart + ", adresseArrivée=" + adresseArrivée
+		return "Annonce [id=" + id + ", adresseDepart=" + adresseDepart + ", adresseArrivée=" + adresseArrivee
 				+ ", immatriculation=" + immatriculation + ", marque=" + marque + ", modele=" + modele
 				+ ", nombrePlacesDispo=" + nombrePlacesDispo + ", dateDepart=" + dateDepart + ", statut=" + statut
 				+ ", collegue=" + collegue + "]";

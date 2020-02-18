@@ -47,10 +47,29 @@ public class ReservationAnnonce {
 	}
 
 	public ReservationAnnonce(Annonce annonce, Collegue collegue, Statut statut) {
-		super();
 		this.annonce = annonce;
 		this.collegue = collegue;
 		this.statut = statut;
+	}
+
+	public ReservationAnnonce(Integer id, Annonce annonce, Collegue collegue, Statut statut) {
+		this(annonce, collegue, statut);
+		this.id = id;
+	}
+
+	/**
+	 * @return the id
+	 */
+	public Integer getId() {
+		return id;
+	}
+
+	/**
+	 * @param id
+	 *            the id to set
+	 */
+	public void setId(Integer id) {
+		this.id = id;
 	}
 
 	/**
